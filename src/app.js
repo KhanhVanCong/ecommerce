@@ -1,3 +1,4 @@
+require('dotenv').config();
 const compression = require('compression');
 const express = require('express');
 const { default: helmet } = require('helmet');
@@ -11,6 +12,7 @@ app.use(helmet());
 app.use(compression());
 
 // init db
+require('./dbs/init.mongodb');
 
 // init routes
 app.get('/', (req, res, next) => {
