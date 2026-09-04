@@ -20,7 +20,7 @@ class Database {
             .then(() => {
                 console.log('Database connection successful');
                 checkConnection();
-                checkOverload();
+                // checkOverload();
             })
             .catch(err => {
                 console.error('Database connection error', err);
