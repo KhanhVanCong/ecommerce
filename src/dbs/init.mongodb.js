@@ -1,9 +1,9 @@
 'use strict';
 
 const mongoose = require('mongoose');
-const { db: { user, password, host }} = require('../configs/config.mongodb');
+const { db: { user, password, host, name }} = require('../configs/config.mongodb');
 const { checkConnection, checkOverload } = require('../helpers/check.connnect');
-const connectString = `mongodb+srv://${user}:${password}@${host}/`;
+const connectString = `mongodb+srv://${user}:${password}@${host}/${name}`;
 
 class Database {
     constructor() {
